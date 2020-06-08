@@ -1,0 +1,19 @@
+<div class="demo-full-width margin-top"
+  [formGroup]="group"
+  *ngIf="!field.disabled">
+  <!-- <ng-container *ngFor="let validation of field.validations;"
+        ngProjectAs="mat-error">
+        <mat-error *ngIf="group.get(field.name).hasError(validation.name)"
+            id="validationMessage-{{validation.message.split(' ').join('')}}">
+            {{validation.message}}</mat-error>
+    </ng-container>
+    <mat-label id="lbl-{{field.name}}">{{field.label}}</mat-label>
+    <mat-select [placeholder]="field.label"
+        id="lbl-{{field.name}}"
+        [formControlName]="field.name"
+        (selectionChange)="triggerDependency($event.value)">
+        <mat-option *ngFor="let item of field.options"
+            id="optionsAvailable-{{item.Value}}"
+            [value]="item.Value">{{item.Desc}}</mat-option>
+    </mat-select> -->
+</div>

@@ -1,0 +1,13 @@
+<div style="float: left;"
+  [formGroup]="group">
+  <label>{{field.label}}</label>
+
+  <input id="{{field.name}}"
+    [formControlName]="field.name"
+    (blur)="triggerDependency($event)">
+
+  <div *ngFor="let validation of field.validations;">
+    <span *ngIf="group.get(field.name).hasError(validation.name)">
+      {{validation.message}}</span>
+  </div>
+</div>

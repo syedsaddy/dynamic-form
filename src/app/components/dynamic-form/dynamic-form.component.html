@@ -1,0 +1,25 @@
+<form scrollToError
+  class="dynamic-form"
+  [formGroup]="form"
+  (submit)="onSubmit($event)"
+  novalidate>
+  <ng-container *ngFor="let field of fields;">
+    <!-- <ng-container *ngIf="isFieldArray(field)">
+      <div class="form-row">
+        <ng-container *ngFor="let innerField of field;">
+          <ng-container appDynamicField
+            [field]="innerField"
+            [fields]="fields"
+            [group]="form">
+          </ng-container>
+        </ng-container>
+      </div>
+    </ng-container> -->
+    <ng-container *ngIf="!isFieldArray(field)"
+      appDynamicField
+      [field]="field"
+      [fields]="fields"
+      [group]="form">
+    </ng-container>
+  </ng-container>
+</form>

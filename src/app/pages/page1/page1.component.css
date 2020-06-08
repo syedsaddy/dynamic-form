@@ -1,0 +1,13 @@
+.blueTheme {
+    background-color: skyblue;
+    font: outline;
+    font-size: medium;
+    color: green;
+}
+
+.greenTheme {
+     background-color: limegreen;
+    font: outline;
+    font-size: small;
+    color:black;
+}
